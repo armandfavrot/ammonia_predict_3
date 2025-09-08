@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ammonia-predict-3"
+version = "0.1.0"
+description = "Predict ammonia emissions with a simple RNN model"
+readme = "README.md"
+requires-python = ">=3.12.3"
+authors = [
+  { name = "Armand Favrot", email = "armand.favrot@inrae.fr" }
+]
+dependencies = [
+  "pandas>=2.2.3",
+  "torch>=2.5.0"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ammonia_predict_3 = ["data/*.pth"]
+
+[project.optional-dependencies]
+build = ["build", "twine"]
+dev = ["pytest"]
+
+
