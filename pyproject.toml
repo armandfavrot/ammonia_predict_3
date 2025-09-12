@@ -11,10 +11,19 @@ requires-python = ">=3.12.3"
 authors = [
   { name = "Armand Favrot", email = "armand.favrot@inrae.fr" }
 ]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python",
+]
 dependencies = [
   "pandas>=2.2.3",
   "torch>=2.5.0"
 ]
+
+[project.optional-dependencies]
+build = ["build", "twine"]
+dev = ["pytest"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
@@ -25,10 +34,6 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 ammonia_predict_3 = ["data/*.pth"]
-
-[project.optional-dependencies]
-build = ["build", "twine"]
-dev = ["pytest"]
 
 [tool.bumpver]
 current_version = "0.2.0"
@@ -45,3 +50,6 @@ push = true
     'version = "{version}"',
 ]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
