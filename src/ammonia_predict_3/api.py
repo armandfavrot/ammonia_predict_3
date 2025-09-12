@@ -27,9 +27,10 @@ model = AmmoniaRNN(input_size = input_size,
                    embedding_dims = embedding_dims).to(DEVICE)
 
 
-resource = files(__package__) / "data" / "final_model.pth"
+resource = files(__package__).joinpath("data").joinpath("final_model.pth")
 with as_file(resource) as path:
-    model.load_state_dict(torch.load(str(path), weights_only = True, map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load(path, weights_only = True, map_location=torch.device('cpu')))
+
 
 
 def predict (df):
@@ -57,3 +58,6 @@ def predict (df):
     data_predictions['prediction_ecum'] = data_predictions.groupby('pmid')['prediction_delta_ecum'].cumsum()
 
     return data_predictions
+
+def add_plus_two (x):
+    return (x + 3)
