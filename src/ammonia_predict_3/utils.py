@@ -77,7 +77,7 @@ def check_t_incorp_col (_df):
     if 'incorp' in _df.columns:
         if list (set (_df['incorp'].unique()) - set (["none"])):
             if 't_incorp' not in _df.columns:
-                raise ValueError (f"Column t_incorp is missing.")
+                raise ValueError ("Column t_incorp is missing.")
     else:
         if 't_incorp' in _df.columns:
             raise ValueError ("Column t_incorp is not allowed since there is no incorp column.")
@@ -101,7 +101,7 @@ def complete_incorp (_df):
             _df['t_incorp'] = _df['t_incorp'].fillna (1000)
 
         elif 't_incorp' not in _df.columns:
-            _df["t_incorp"] = np.where(_df["incorp"] == "none", 1000, 0)
+            _df["t_incorp"] = [1000 if val == "none" else 0 for val in df["incorp"]]
             
 
     elif 'incorp' not in _df.columns:
