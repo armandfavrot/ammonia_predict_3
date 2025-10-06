@@ -1,8 +1,8 @@
 # ammonia-predict
 
-Predict ammonia emissions with a simple RNN model.
+Predict ammonia emissions with a simple RNN model. This model correspond to the 'rnn 9 - data a.' model described in [ref].
 
-## Install (dev)
+## Install
 
 ```bash
 pip install -e .
@@ -17,25 +17,22 @@ You can use the package in Python as follows:
 import pandas as pd
 from ammonia_predict_3 import predict
 
-df = pd.DataFrame({
-    "pmid": [1, 1],
-    "ct": [2, 4],
-    "dt": [2, 2],
-    "air_temp": [12, 15],
-    "wind_2m": [3, 3],
-    "rain_rate": [0, 0],
-    "tan_app": [36.7, 36.7],
-    "app_rate": [10, 10],
-    "man_dm": [0.1, 0.1],
-    "man_ph": [7, 7],
-    "t_incorp": [0, 0],
-    "app_mthd": [1, 1],
-    "incorp": [0, 0],
-    "man_source": [1, 1],
+df = pd.DataFrame ({
+    "pmid": [1, 1, 1, 1, 1, 1],
+    "ct": [3, 6, 10, 24, 48, 72],
+    "tan_app": [42, 42, 42, 42, 42, 42],
+    "air_temp": [18, 23, 24, 15, 21, 20],
+    "wind_2m": [2, 2, 1, 1, 2, 2],
+    "rain_rate": 0,
+    "app_rate": [20, 20, 20, 20, 20, 20],
+    "man_dm": [8.3, 8.3, 8.3, 8.3, 8.3, 8.3],
+    "man_ph": [7.1, 7.1, 7.1, 7.1, 7.1, 7.1],
+    "app_mthd": ["ts", "ts", "ts", "ts", "ts", "ts"],
+    "man_source": ["cat", "cat", "cat", "cat", "cat", "cat"]
 })
 
 pred = predict(df)
-print(pred[["prediction_delta_ecum", "prediction_ecum"]])
+print(pred)
 ``` 
 
 
