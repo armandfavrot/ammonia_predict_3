@@ -101,7 +101,7 @@ def complete_incorp (_df):
             _df['t_incorp'] = _df['t_incorp'].fillna (1000)
 
         elif 't_incorp' not in _df.columns:
-            _df["t_incorp"] = [1000 if val == "none" else 0 for val in df["incorp"]]
+            _df["t_incorp"] = [1000 if val == "none" else 0 for val in _df["incorp"]]
             
 
     elif 'incorp' not in _df.columns:
