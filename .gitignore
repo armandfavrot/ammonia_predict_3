@@ -5,3 +5,10 @@ dist/
 *.egg-info/ 
 
 __pycache__/
+
+dev.ipynb
+dev_meteo_interpolation.ipynb 
+df.csv
+
+.ipynb_checkpoints/ 
+.virtual_documents/
