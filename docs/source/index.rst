@@ -6,6 +6,7 @@
 ammonia_predict_3 documentation
 ===============================
 
+This package provides a function to predict ammonia volatilization after manure application.
 
 .. toctree::
    :maxdepth: 2
