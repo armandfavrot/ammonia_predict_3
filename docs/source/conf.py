@@ -30,9 +30,6 @@ exclude_patterns = []
 
 add_module_names = False
 
-# Mock heavy imports during doc build (e.g., torch)
-autodoc_mock_imports = ["torch"]
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
