@@ -72,14 +72,14 @@ def predict (df):
                 - app_rate: application rate (t/ha)
                 - man_dm: manure dry matter content (%)
                 - man_ph: manure pH
-                - app_mthd: application method (must belong to {bc, bsth, ts, os, cs}\*)
+                - app_mthd: application method (must belong to {bc, bsth, ts, os, cs} (1))
                 - man_source: manure source (must belong to {pig, cat})
                 - incorp: incorporation (must belong to {none, shallow, deep})
-                - t_incorp: time of incorporation (h)\*\*
+                - t_incorp: time of incorporation (h) (2)
 
-        \*bc = broadacst, bsth = band spreading trailing hose, ts = trailing shoe, os = open slot, cs = closed slot.
+        (1) bc = broadacst, bsth = band spreading trailing hose, ts = trailing shoe, os = open slot, cs = closed slot.
 
-        \*\*When incorp = none, t_incorp must be set to NaN.
+        (2) When incorp = none, t_incorp must be set to NaN.
 
         Default values for optional columns: air_temp = 13.89, wind_2m = 3.11, rain_rate = 0, app_rate = 29.38, man_dm = 6.25, man_ph = 7.38, app_mthd = bsth, man_source = cat, incorp = none. 
 
