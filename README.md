@@ -1,6 +1,6 @@
 # ammonia-predict-3
 
-This is a simple example package developed for the Finist’R 2025 week.
+This is a toy package developed for the Finist’R 2025 week.
 
 It provides a single function, predict, which estimates ammonia emissions following field fertilization under given environmental conditions.
 
@@ -44,4 +44,4 @@ print(pred)
 ## Notes
 
 - The trained weights are included in the package under `ammonia_predict/data/final_model.pth`.
-- The package requires **Python ≥3.9**, **PyTorch**, and **pandas**.
+- The package requires **Python ≥3.12**, **PyTorch ≥2.5**, and **pandas ≥2.2.3**.
