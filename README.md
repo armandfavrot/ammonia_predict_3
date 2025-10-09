@@ -1,16 +1,18 @@
-# ammonia-predict
+# ammonia-predict-3
 
-Ce package consiste en une unique fonction 'predict' qui permet de prédire les émissions d'ammoniac suite à la fertilisation des champs en fonction de certaines conditions environnementales. Le modèle utilisé est un réseau de neurones récurrent qui est décrit dans [ref] sour le nom de 'rnn 9 - data a.'. La fonction 'predict' fonctionne de manière similaire à fonction 'alfam2' du package r ALFAM2 disponible [ici](https://cran.r-project.org/web/packages/ALFAM2/index.html).
+This is a simple example package developed for the Finist’R 2025 week.
+
+It provides a single function, predict, which estimates ammonia emissions following field fertilization under given environmental conditions.
 
 ## Install
 
 ```bash
-pip install nh3pred 
+pip install -i https://test.pypi.org/simple/ ammonia-predict-3
 ```
 
 ## Documentation
 
-Une aide complète pour la fonction 'predict' est disponible ici.
+A complete documentation for the `predict` function is available [here](https://ammonia-predict-3.readthedocs.io/en/latest/).
 
 ## Usage
 
@@ -43,6 +45,3 @@ print(pred)
 
 - The trained weights are included in the package under `ammonia_predict/data/final_model.pth`.
 - The package requires **Python ≥3.9**, **PyTorch**, and **pandas**.
-
-
-
