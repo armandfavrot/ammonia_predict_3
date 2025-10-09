@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ammonia-predict-3"
-version = "0.2.0"
+version = "0.2.1"
 description = "Predict ammonia emissions with a simple RNN model"
 readme = "README.md"
 requires-python = ">=3.12.3"
@@ -36,7 +36,7 @@ where = ["src"]
 ammonia_predict_3 = ["data/*.pth"]
 
 [tool.bumpver]
-current_version = "0.2.0"
+current_version = "0.2.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 tag_message = "{new_version}"
